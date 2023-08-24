@@ -1,3 +1,8 @@
+# ⚠️ Not Actively Maintained
+Not actively maintained. I no longer play indoor competitively so I haven't used or updated this program in a hot minute. 
+
+If I were to make some improvements I would probably use an AST parser instead of manually parsing like I did here. Have to say though, I am proud of freshmen year me for making this after taking only one CS course and continuing to improve it throughout my sophmore year. Had a good run with this and maybe you will too :)
+
 # Volleyball_Stats_and_Analytics
 A volleyball scouting tool
 
@@ -147,3 +152,118 @@ h042dpla14m3ce18
 For invalid lines in the report, the program will mark the line as invalid, disregard the line and continue.
 ![Screenshot from 2023-08-24 15-10-55](https://github.com/ryanbyrne30/volleyball-scouting-reporter/assets/33855634/75a47714-7de7-4ded-8084-10336e491220)
 
+## Example Response
+For the very simple example
+```
+# 1
+f103ohlk10
+f101rsce10
+```
+
+This produces the following:
+```
+{
+  "hitting": {
+    "attempts": 2,
+    "kills": 1,
+    "errors": 1,
+    "players": {
+      "10": {
+        "attempts": 2,
+        "kills": 1,
+        "errors": 1,
+        "position": {
+          "oh": {
+            "attempts": 1,
+            "kills": 1,
+            "errors": 0,
+            "shot": {
+              "l": {
+                "attempts": 1,
+                "kills": 1,
+                "errors": 0
+              }
+            }
+          },
+          "rs": {
+            "attempts": 1,
+            "kills": 0,
+            "errors": 1,
+            "shot": {
+              "c": {
+                "attempts": 1,
+                "kills": 0,
+                "errors": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "setting": {
+    "total": 2,
+    "rows": {
+      "1": {
+        "total": 2,
+        "position": {
+          "oh": {
+            "total": 1,
+            "track": 1
+          },
+          "rs": {
+            "total": 1,
+            "track": -1
+          }
+        },
+        "rating": {
+          "3": {
+            "total": 1,
+            "position": {
+              "oh": {
+                "total": 1,
+                "track": 1
+              }
+            }
+          },
+          "1": {
+            "total": 1,
+            "position": {
+              "rs": {
+                "total": 1,
+                "track": -1
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "serving": {
+    "attempts": 0,
+    "track": 0,
+    "aces": 0,
+    "errors": 0,
+    "spots": {},
+    "players": {}
+  },
+  "passing": {
+    "attempts": 2,
+    "track": 4,
+    "players": {
+      "10": {
+        "servetype": {
+          "f": {
+            "attempts": 2,
+            "track": 4
+          }
+        },
+        "attempts": 2,
+        "track": 4
+      }
+    }
+  }
+}
+```
+
+As you can image, these reports can produce a lot of in depth data for an entire team. I commented out the portion of the program that delivers these reports to Google Sheets (API key is no longer active).
