@@ -8,10 +8,20 @@ Keeps track of:
 - passing ratings for each player based on serve type
 
 # Format
+
+## Rotations
 Start off a report by adding the starting rotation at the top of the file. You can comment it out if it makes it easier.
 ```
 # 1 - Designates starting in rotation 1
 ```
+
+The program will automatically keep track of the rotations of the team based upon the stats taken. If a line designates the team was receiving and the next line describe the team as serving, the program will increment the rotation automatically so you don't have to.
+
+**If you need to specifically define which rotation it is in your report**, such as missing some rallys or to correct some data, you can add a line with an astericks follow by a number. This will reset the program rotation counter to the number you specify (0-6). Rotations will resume incrementing automatically from this point.
+```
+* 4 - Tells the program to start the following entries from rotation 4
+```
+
 
 ## Receiving
 When the team is receiving, the starting sequence starts with the serve type...
